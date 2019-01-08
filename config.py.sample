@@ -1,0 +1,4 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+token = '123456789:yoursecretapitokenreceivedbythebotfather'
