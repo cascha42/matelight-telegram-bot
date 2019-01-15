@@ -1,3 +1,6 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
 import requests
 import datetime
 import time
@@ -5,8 +8,7 @@ import config
 
 telegram_token = config.telegram_token 
 telegram_api_url = "https://api.telegram.org/bot{}/".format(telegram_token)
-matelight_api_url = "http://matelight.cbrp3.c-base.org:80/api/"
-#matelight_api_url = "http://localhost:1337/api/"
+matelight_api_url = config.matelight_api_url
 
 def telegram_send_message(chat_id, text):
     params = {'chat_id': chat_id, 'text': text}

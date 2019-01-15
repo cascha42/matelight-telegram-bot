@@ -2,3 +2,4 @@
 # -*- coding: utf-8 -*-
 
 token = '123456789:yoursecretapitokenreceivedbythebotfather'
+matelight_api_url = "http://matelight.cbrp3.c-base.org:80/api/"
