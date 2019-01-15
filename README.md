@@ -1,5 +1,4 @@
-# WORK IN PROGRESS, NOT WORKING YET!
-## matelight-telegram-bot
+# matelight-telegram-bot
 
-python script to communicate with the telegram api. 
-control the matelight at c-base via telegram bot @MatelightBot
+Python Script which connects the Telegram-API with the Matelight-API. 
+Your are able to Control the Matelight at c-base Berlin via the Telegram-Bot: "@MatelightBot"  
