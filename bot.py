@@ -36,7 +36,7 @@ Available Commands:
 
 def bot_play( chatid, args ):
     if len (args) < 2:
-        return bot_help(chatid, args)
+        return bot_play_usage(chatid, args)
     msg = "playing {}".format( args[1] )
     resp = requests.get(matelight_api_url + "getvideos").json()
     videos = [vid['title'] for vid in resp]
@@ -53,6 +53,15 @@ def bot_list( chatid, args ):
         videos.append(item["title"])
     msg = "available videos:\n  " + ",\n  ".join(videos)
     telegram_send_message( chatid, msg )
+
+def bot_play_usage( chatid, args ):
+    msg = """
+Usage: /play [video_id].
+List Videos with /list command.
+    """
+    telegram_send_message( chatid, msg )
+
+
 
 def bot_start( chatid, args ):
     msg = """
