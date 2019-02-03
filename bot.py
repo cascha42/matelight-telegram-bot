@@ -101,11 +101,14 @@ if __name__ == "__main__":
 
     curr_offset = -1
     while True:
-        results = get_updates(offset=curr_offset+1)
-        for result in results:
-            curr_offset = result['update_id']
-            msg = result['message']
-            chatid = result["message"]["chat"]["id"]
+        result = get_updates(offset=curr_offset+1)
+        for element in result:
+            if 'message' not in element:
+                continue
+
+            curr_offset = element['update_id']
+            msg = element['message']
+            chatid = element["message"]["chat"]["id"]
             text = msg.get('text')
             if text is not None:
                 print( "got {}".format( msg ) )
